@@ -80,3 +80,11 @@ class Fila {
             tras = novo;
         }
     }
+   public Elemento atender() {
+        if (frente == null) return null;
+        Elemento r = frente.elemento;
+        frente = frente.prox;
+        if (frente == null) tras = null;
+        return r;
+    }
+
