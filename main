@@ -41,3 +41,12 @@ class Pilha {
   if (topo == null) return null;
   return topo.elemento;
 }
+  public int tamanho() {
+        int c = 0;
+        Node p = topo;
+        while (p != null) {
+            c++;
+            p = p.prox;
+        }
+        return c;
+    }
