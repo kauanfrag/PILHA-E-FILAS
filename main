@@ -33,3 +33,6 @@ class Pilha {
         topo = topo.prox;
         return ret;
     }
+   public boolean estaVazia() {
+        return topo == null;
+    }
