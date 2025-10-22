@@ -20,7 +20,7 @@ class Node {
 }
 
 class Pilha {
-    private Node topo
+    private Node topo;
 
     public Pilha() {
         topo = null;
