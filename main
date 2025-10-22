@@ -50,3 +50,15 @@ class Pilha {
         }
         return c;
     }
+   public String listar() {
+        String s = "";
+        Node p = topo;
+        int i = 1;
+        while (p != null) {
+            s = s + i + ". " + p.elemento.id + " | " + p.elemento.descricao + " | " + p.elemento.info + "\n";
+            p = p.prox;
+            i++;
+        }
+        return s;
+    }
+}
