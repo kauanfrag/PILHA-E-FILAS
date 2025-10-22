@@ -70,3 +70,13 @@ class Fila {
         frente = null;
         tras = null;
     }
+ public void adicionar(Elemento e) {
+        Node novo = new Node(e);
+        if (frente == null) {
+            frente = novo;
+            tras = novo;
+        } else {
+            tras.prox = novo;
+            tras = novo;
+        }
+    }
