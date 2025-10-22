@@ -1,0 +1,6 @@
+public class SistemaAtendimento {
+    static int contadorMinuto = 0;
+
+    public static void main(String[] args) {
+        Pilha historico = new Pilha();
+        Fila fila = new Fila();
