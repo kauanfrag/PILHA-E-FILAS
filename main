@@ -90,5 +90,18 @@ class Fila {
     public boolean estaVazia() {
         return frente == null;
     }
+ public Elemento proximo() {
+        if (frente == null) return null;
+        return frente.elemento;
+    }
 
+    public int tamanho() {
+        int c = 0;
+        Node p = frente;
+        while (p != null) {
+            c++;
+            p = p.prox;
+        }
+        return c;
+    }
 
