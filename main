@@ -2,3 +2,9 @@ class Elemento {
     String id;
     String descricao;
     String info;
+    public Elemento(String id, String descricao, String info) {
+    this.id = id;
+    this.descricao = descricao;
+    this.info = info;
+}}
+
