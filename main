@@ -27,3 +27,9 @@ class Pilha {
         novo.prox = topo;
         topo = novo;
     }
+ public Elemento pop() {
+        if (topo == null) return null;
+        Elemento ret = topo.elemento;
+        topo = topo.prox;
+        return ret;
+    }
