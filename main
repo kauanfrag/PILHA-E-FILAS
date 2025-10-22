@@ -22,3 +22,8 @@ class Pilha {
     public Pilha() {
         topo = null;
     }
+  public void push(Elemento e) {
+        Node novo = new Node(e);
+        novo.prox = topo;
+        topo = novo;
+    }
