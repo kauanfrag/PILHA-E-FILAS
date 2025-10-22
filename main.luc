@@ -85,7 +85,7 @@ class Fila {
         Node novo = new Node(e);
         if (frente == null) {
             frente = novo;
-            tras = novo;
+            tras = novo
         } else {
             tras.prox = novo;
             tras = novo;
