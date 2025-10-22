@@ -1,1 +1,134 @@
+class Elemento {
+    String id;
+    String descricao;
+    String info;
+
+    public Elemento(String id, String descricao, String info) {
+        this.id = id;
+        this.descricao = descricao;
+        this.info = info;
+    }
+}
+
+class Node {
+    Elemento elemento;
+    Node prox;
+    public Node(Elemento elemento) {
+        this.elemento = elemento;
+        this.prox = null;
+    }
+}
+
+class Pilha {
+    private Node topo;
+
+    public Pilha() {
+        topo = null;
+    }
+
+    public void push(Elemento e) {
+        Node novo = new Node(e);
+        novo.prox = topo;
+        topo = novo;
+    }
+
+    public Elemento pop() {
+        if (topo == null) return null;
+        Elemento ret = topo.elemento;
+        topo = topo.prox;
+        return ret;
+    }
+
+    public boolean estaVazia() {
+        return topo == null;
+    }
+
+    public Elemento topo() {
+        if (topo == null) return null;
+        return topo.elemento;
+    }
+
+    public int tamanho() {
+        int c = 0;
+        Node p = topo;
+        while (p != null) {
+            c++;
+            p = p.prox;
+        }
+        return c;
+    }
+
+    public String listar() {
+        String s = "";
+        Node p = topo;
+        int i = 1;
+        while (p != null) {
+            s = s + i + ". " + p.elemento.id + " | " + p.elemento.descricao + " | " + p.elemento.info + "\n";
+            p = p.prox;
+            i++;
+        }
+        return s;
+    }
+}
+
+class Fila {
+    private Node frente;
+    private Node tras;
+
+    public Fila() {
+        frente = null;
+        tras = null;
+    }
+
+    public void adicionar(Elemento e) {
+        Node novo = new Node(e);
+        if (frente == null) {
+            frente = novo;
+            tras = novo;
+        } else {
+            tras.prox = novo;
+            tras = novo;
+        }
+    }
+
+    public Elemento atender() {
+        if (frente == null) return null;
+        Elemento r = frente.elemento;
+        frente = frente.prox;
+        if (frente == null) tras = null;
+        return r;
+    }
+
+    public boolean estaVazia() {
+        return frente == null;
+    }
+
+    public Elemento proximo() {
+        if (frente == null) return null;
+        return frente.elemento;
+    }
+
+    public int tamanho() {
+        int c = 0;
+        Node p = frente;
+        while (p != null) {
+            c++;
+            p = p.prox;
+        }
+        return c;
+    }
+
+    public String listar() {
+        String s = "";
+        Node p = frente;
+        int i = 1;
+        while (p != null) {
+            s = s + i + ". " + p.elemento.id + " | " + p.elemento.descricao + " | " + p.elemento.info + "\n";
+            p = p.prox;
+            i++;
+        }
+        return s;
+    }
+}
+
 
