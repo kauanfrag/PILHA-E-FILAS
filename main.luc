@@ -6,7 +6,7 @@ class Elemento {
     public Elemento(String id, String descricao, String info) {
         this.id = id;
         this.descricao = descricao;
-        this.info = info;
+        this.info = info
     }
 }
 
