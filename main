@@ -62,3 +62,11 @@ class Pilha {
         return s;
     }
 }
+class Fila {
+    private Node frente;
+    private Node tras;
+
+    public Fila() {
+        frente = null;
+        tras = null;
+    }
