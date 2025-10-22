@@ -1,7 +1,8 @@
 class Elemento {
     String id;
     String descricao;
-    String dados;
+    String info;
+
 
     public Elemento(String id, String descricao, String info) {
         this.id = id;
