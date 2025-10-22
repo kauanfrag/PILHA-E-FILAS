@@ -10,7 +10,7 @@ class Elemento {
     }
 }
 
-class Node 
+class Node {
     Elemento elemento;
     Node prox;
     public Node(Elemento elemento) {
